@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonSelectionView" customModule="SegmentedControlDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="F2g-t0-tSg" id="b00-3H-brC"/>
+                <outlet property="selectImageView" destination="jq7-HN-HFw" id="nT7-rD-0uR"/>
+                <outlet property="titleLabel" destination="gXk-MV-9l9" id="tdk-gK-A8h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="F2g-t0-tSg">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRM-Zr-sMA">
+                    <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WY-mR-Ybh">
+                            <rect key="frame" x="20" y="13" width="24" height="24"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox" translatesAutoresizingMaskIntoConstraints="NO" id="jq7-HN-HFw">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGv-vS-AMq">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="itemSelectedTapped" destination="-1" eventType="touchUpInside" id="Smg-Re-Jjb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="jq7-HN-HFw" firstAttribute="leading" secondItem="2WY-mR-Ybh" secondAttribute="leading" id="3xp-cE-Ypw"/>
+                                <constraint firstAttribute="width" constant="24" id="5yj-MO-iMh"/>
+                                <constraint firstAttribute="bottom" secondItem="jq7-HN-HFw" secondAttribute="bottom" id="LzM-SX-pMU"/>
+                                <constraint firstItem="JGv-vS-AMq" firstAttribute="top" secondItem="2WY-mR-Ybh" secondAttribute="top" id="Q1p-8F-XAZ"/>
+                                <constraint firstItem="jq7-HN-HFw" firstAttribute="top" secondItem="2WY-mR-Ybh" secondAttribute="top" id="R7d-cN-O9F"/>
+                                <constraint firstAttribute="trailing" secondItem="JGv-vS-AMq" secondAttribute="trailing" id="Vpg-NV-cNC"/>
+                                <constraint firstAttribute="bottom" secondItem="JGv-vS-AMq" secondAttribute="bottom" id="Ymr-RX-UQn"/>
+                                <constraint firstItem="JGv-vS-AMq" firstAttribute="leading" secondItem="2WY-mR-Ybh" secondAttribute="leading" id="eGO-zE-MEJ"/>
+                                <constraint firstAttribute="trailing" secondItem="jq7-HN-HFw" secondAttribute="trailing" id="lI5-EO-YRC"/>
+                                <constraint firstAttribute="height" constant="24" id="paq-v7-AEe"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Newest to Oldest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXk-MV-9l9">
+                            <rect key="frame" x="60" y="15" width="185" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0P3-os-y8D"/>
+                        <constraint firstItem="2WY-mR-Ybh" firstAttribute="leading" secondItem="HRM-Zr-sMA" secondAttribute="leading" constant="20" id="OUf-IY-UaD"/>
+                        <constraint firstAttribute="trailing" secondItem="gXk-MV-9l9" secondAttribute="trailing" constant="20" id="clC-Gj-o28"/>
+                        <constraint firstItem="2WY-mR-Ybh" firstAttribute="centerY" secondItem="HRM-Zr-sMA" secondAttribute="centerY" id="raq-gh-axM"/>
+                        <constraint firstItem="gXk-MV-9l9" firstAttribute="centerY" secondItem="2WY-mR-Ybh" secondAttribute="centerY" id="wEY-bG-RfW"/>
+                        <constraint firstItem="gXk-MV-9l9" firstAttribute="leading" secondItem="2WY-mR-Ybh" secondAttribute="trailing" constant="16" id="xls-DH-6iX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HRM-Zr-sMA" secondAttribute="trailing" id="5G1-7A-pFW"/>
+                <constraint firstItem="HRM-Zr-sMA" firstAttribute="leading" secondItem="F2g-t0-tSg" secondAttribute="leading" id="8zB-Sn-InJ"/>
+                <constraint firstAttribute="bottom" secondItem="HRM-Zr-sMA" secondAttribute="bottom" id="P7S-mn-bl4"/>
+                <constraint firstItem="HRM-Zr-sMA" firstAttribute="top" secondItem="F2g-t0-tSg" secondAttribute="top" id="SPw-41-88H"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-6" y="118"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkbox" width="26" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

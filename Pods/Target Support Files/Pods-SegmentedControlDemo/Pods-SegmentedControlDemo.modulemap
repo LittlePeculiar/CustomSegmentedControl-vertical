@@ -1,0 +1,6 @@
+framework module Pods_SegmentedControlDemo {
+  umbrella header "Pods-SegmentedControlDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
